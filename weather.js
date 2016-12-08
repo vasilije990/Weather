@@ -45,14 +45,14 @@ function prikazi1(){
 $('table').empty();
  $('#grad').empty()
 var J=$('#grad').attr('znak') 
-var S=$('#grad').attr('jedinica')
+var s=$('#grad').attr('jedinica')
 var d=$('#grad').attr('drzava')
 var c=$('#grad').attr('grad')
 $('#grad').append(c+", "+d) 
 var a=$('#grad').attr('lat')
 var b=$('#grad').attr('lng')
 $.ajax({
-  url: 'http://api.openweathermap.org/data/2.5/weather?lat='+a+'&lon='+b+'&units='+S+'&appid=a49e7f706764e70dcb91ba3ebc2ed09c', 
+  url: 'http://api.openweathermap.org/data/2.5/weather?lat='+a+'&lon='+b+'&units='+s+'&appid=a49e7f706764e70dcb91ba3ebc2ed09c', 
   method:'GET'
 })
 .done(function(res) {
@@ -67,11 +67,11 @@ prikazi()
 }
 function prikazi(){
 var J=$('#grad').attr('znak') 
-var S=$('#grad').attr('jedinica')
+var s=$('#grad').attr('jedinica')
 var a=$('#grad').attr('lat')
 var b=$('#grad').attr('lng') 
 $.ajax({
-  url: 'http://api.openweathermap.org/data/2.5/forecast/daily?lat='+a+'&lon='+b+'&cnt=8&mode=json&units='+S+'&appid=a49e7f706764e70dcb91ba3ebc2ed09c',  
+  url: 'http://api.openweathermap.org/data/2.5/forecast/daily?lat='+a+'&lon='+b+'&cnt=8&mode=json&units='+s+'&appid=a49e7f706764e70dcb91ba3ebc2ed09c',  
   method:'GET'
 })
 .done(function(res) {
